@@ -54,7 +54,7 @@ public class AndroidBaseAppium {
 			e.printStackTrace();
 		}
 	}
-	//移动端流程图
+	//android端流程图
 	public static void myscreenShot(AndroidDriver<AndroidElement> appium, String imagname) throws IOException {
 		imagname = imagname + ".png";
 		String relativelyPath = System.getProperty("user.dir");
@@ -66,7 +66,7 @@ public class AndroidBaseAppium {
 				e.printStackTrace();
 			}
 			File imageFile = ((TakesScreenshot) (new Augmenter().augment(appium))).getScreenshotAs(OutputType.FILE);
-			File screenFile = new File(relativelyPath + "\\ScreenShot\\移动端流程图\\" + imagname);
+			File screenFile = new File(relativelyPath + "\\ScreenShot\\android端流程图\\" + imagname);
 			FileUtils.copyFile(imageFile, screenFile);
 			imageFile.deleteOnExit();
 		} catch (IOException e) {

@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -349,6 +350,15 @@ public class EncapsulateOperation {
                 result = "gotoparentframe切换至上一级frame位置...";
                 LogUtil.APP.info(result);
                 break;
+                //自己添加截图功能
+            case "screenshot":
+            	 java.text.DateFormat timeformat = new java.text.SimpleDateFormat("MMdd-hhmmss");
+                 String  imagname = timeformat.format(new Date());
+                 BaseWebDrive.mywebScreenShot(wd, imagname);
+                 result = "保存当前网页截图...";
+                 LogUtil.APP.info(result);
+                 break;
+                
             case "gettitle":
                 result = "获取到的值是【" + wd.getTitle() + "】";
                 luckyclient.publicclass.LogUtil.APP.info("获取页面Title...【" + wd.getTitle() + "】");

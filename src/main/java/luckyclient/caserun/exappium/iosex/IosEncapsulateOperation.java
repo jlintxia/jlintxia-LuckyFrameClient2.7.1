@@ -451,7 +451,7 @@ public class IosEncapsulateOperation {
 		case "screenshot":
 			java.text.DateFormat timeformat = new java.text.SimpleDateFormat("MMdd-HHmmss");
 			String imagname = "FunctionScreenShot_" + timeformat.format(new Date());
-			IosBaseAppium.screenShot(appium, imagname);
+			IosBaseAppium.myscreenShot(appium, imagname);
 			result = "截图名称【" + imagname + "】...";
 			luckyclient.publicclass.LogUtil.APP.info("使用方法主动截取当前屏幕..." + result);
 			break;
